@@ -39,7 +39,6 @@
               <img src="images/main-header logo right.png" alt="Logo Icon" /> 
             </div>
           </div>
-          
           <div class="head-footer">
             <div class="dropdown">
               <button class="dropdown-btn">CATEGORIES &#9662</button>
@@ -85,8 +84,7 @@
                         </div>
                       </div>
                     </div>
-                  </li>
-                  
+                  </li>   
                 <li><img src="images/four-logo for categories.png" alt="Icon" class="list-icon" /> Home, Garden & Tools</li>
                 <li><img src="images/five-logo for categories.png" alt="Icon" class="list-icon" /> Decor & Furniture</li>
                 <li><img src="images/six-logo for categories.png" alt="Icon" class="list-icon" /> Sports & Outdoors</li>
@@ -94,8 +92,66 @@
                 <li><img src="images/eight-logo for categories.png" alt="Icon" class="list-icon" /> Beauty & Health</li>
               </ul>
             </div>
-          </div>        
+            <li class="home-category-item">
+              <button class="home-button">Home <span class="arrow">&#9662;</span></button>
+              <div class="home-dropdown">
+                <div class="home-section">
+                  <ul>
+                    <li class="hover-text">Home Page 1</li>
+                    <li class="hover-text">Home Page 2</li>
+                    <li class="hover-text">Home Page 3</li>
+                    <li class="hover-text">Home Page 4</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+              <button class="nav-btn">
+                SHOP <span class="arrow">&#9662;</span>  
+            </button>
+            <button class="nav-btn">PAGES<span class="arrow">&#9662;</span></button>
+            <button class="nav-btn">BLOD<span class="arrow">&#9662;</span></button>
+            <button class="nav-btn">THEME FEATURES<span class="arrow">&#9662;</span></button>
+          </div>
+        </div>        
       </header>
+      <div class="slider-container">
+        <div class="slide">
+            <img src="images/slider-container 1.png" alt="Image 1" onclick="openLink('link1.html')">
+        </div>
+        <div class="slide">
+            <img src="images/slider-container 2.png" alt="Image 2" onclick="openLink('link2.html')">
+        </div>
+        <div class="slide">
+            <img src="images/slider-container 3.png" alt="Image 3" onclick="openLink('link3.html')">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div id="center_column" class="center_column">
+      <div class="deal-title">
+        <span class="deal-text">Deal Of The Week</span>
+        <div class="arrows">
+            <button class="arrow-left">&#9664;</button>
+            <button class="arrow-right">&#9654;</button>
+        </div>
+      </div>
+      <div class="product-gallery">
+        <div class="gallery-wrapper">
+            <div class="product-item"><img src="images/1 pic for gallery.png" alt="Product 1"></div>
+            <div class="product-item"><img src="images/2 pick for gallery.png" alt="Product 2"></div>
+            <div class="product-item"><img src="images/3 pick for gallery.png" alt="Product 3"></div>
+            <div class="product-item"><img src="images/4 pick for gallery.png" alt="Product 4"></div>
+            <div class="product-item"><img src="images/5 pick for gallery.png" alt="Product 5"></div>
+            <div class="product-item"><img src="images/6 pick for gallery.png" alt="Product 6"></div>
+            <div class="product-item"><img src="images/7 pick for gallery.png" alt="Product 7"></div>
+            <div class="product-item"><img src="images/8 pick for gallery.png" alt="Product 8"></div>
+        </div>
+    </div>
+    
+    
+    </div>
+
+    
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

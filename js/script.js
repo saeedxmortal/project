@@ -56,3 +56,61 @@ menuItems.forEach(item => {
     });
   });
 
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000);
+  }
+  
+  function nextSlide() {
+      slideIndex++;
+      showSlides();
+  }
+  
+  function prevSlide() {
+      slideIndex--;
+      showSlides();
+  }
+  
+  function openLink(url) {
+      window.location.href = url;
+  }
+
+  let currentIndex = 0;
+const itemsToShow = 4;
+const totalItems = document.querySelectorAll('.product-item').length;
+
+function showNext() {
+    if (currentIndex < totalItems - itemsToShow) {
+        currentIndex++;
+        updateGallery();
+    }
+}
+
+function showPrevious() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateGallery();
+    }
+}
+
+function updateGallery() {
+    const galleryWrapper = document.querySelector('.gallery-wrapper');
+    galleryWrapper.style.transform = `translateX(-${currentIndex * (262 + 10)}px)`;
+}
+
+document.querySelector('.arrow-right').addEventListener('click', showNext);
+document.querySelector('.arrow-left').addEventListener('click', showPrevious);
+
+  
+
+  
+

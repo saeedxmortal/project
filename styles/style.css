@@ -125,19 +125,23 @@
   .head-footer {
     display: flex;
     background-color: #f1f1f1;
-    padding: 15px;
+    position: relative; 
+    height: 70px; 
   }
   
   .dropdown {
     position: relative;
+    margin-top: 16px;
   }
   
   .dropdown-btn {
-    background-color: #333;
+    background-color: black;
     color: #fff;
     padding: 10px;
     border: none;
     cursor: pointer;
+    margin-left: 320px;
+    width: 250px;
   }
   
   .dropdown-content {
@@ -149,7 +153,7 @@
     z-index: 1;
     list-style: none; 
     padding: 0;
-    margin: 0;
+    margin-left: 320px;
   }
   
   .dropdown-content li {
@@ -228,8 +232,6 @@
     color: red;
     font-weight: bold;
   }
-  
-  
   .sub-dropdown {
     display: none;
     position: absolute;
@@ -244,5 +246,198 @@
   .dropdown-content li:hover .sub-dropdown {
     display: block;
   }
+  .home-category-item{
+    list-style: none;
+    height: 100%
+  }
+  .home-button {
+    background-color: #f1f1f1; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.2s ease; 
+    border-right: solid 1px gray;
+    border-left: solid 1px gray;
+    margin-left: 10px;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-button .arrow {
+    font-size: 12px; 
+    margin-left: 5px; 
+  }
+  .home-button:hover{
+    color: red;
+  }
+  
+  .home-dropdown {
+    display: none; 
+    position: absolute;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: left; 
+  
+}
+.home-section ul {
+  padding: 0; 
+  list-style: none; 
+}
+  
+  .home-category-item:hover .home-dropdown {
+    display: block; 
+    
+  }
+  
+  .hover-text {
+    cursor: pointer; 
+    transition: transform 0.2s ease, color 0.2s ease; 
+    text-align: left; 
+    width: 150px; 
+    padding: 10px;
+    color: gray;
+  }
+
+  .hover-text:hover {
+    color: red; 
+    transform: translateY(-2px); 
+  }
+   
+  .head-footer {
+    display: flex;
+}
+
+.nav-btn {
+    background-color: transparent; 
+    border: none; 
+    color: black; 
+    padding: 15px; 
+    cursor: pointer; 
+    border-right: solid 1px gray;
+}
+
+.nav-btn:hover {
+    color: red; 
+}
+
+.slider-container {
+  position: relative;
+  max-height: 575px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+.slider-container:hover .prev,
+.slider-container:hover .next {
+    opacity: 1;
+}
+
+#center_column {
+  width: 100%;
+  max-width: 1200px;
+  height: 5606.91px;
+  margin: 0 auto;
+  background-color: #f5f5f5; 
+}
+.deal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-top: solid 3px red;
+  margin-top: 30px;
+}
+
+.deal-text {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.arrows button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.arrows button:hover {
+  color: #ff0000;
+}
+.product-gallery {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1048px;
+  margin: auto;
+}
+
+.gallery-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.product-item {
+  min-width: 262px;
+  height: 350px;
+  margin-right: 10px;
+}
+
+.product-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+ 
+  
+
+  
   
   
