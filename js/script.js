@@ -110,7 +110,44 @@ function updateGallery() {
 document.querySelector('.arrow-right').addEventListener('click', showNext);
 document.querySelector('.arrow-left').addEventListener('click', showPrevious);
 
+/* js fashion main */
+let fashionClothingCurrentIndex = 0;
+const fashionClothingImages = document.querySelectorAll('.Fashion-cloth-main-images img');
+const fashionClothingTotalImages = fashionClothingImages.length;
+const fashionClothingVisibleImages = 4;
+const fashionClothingImageWidth = 242 + 10; 
+
+document.querySelector('.Fashion-cloth-main-prev').addEventListener('click', fashionClothingShowPrevImage);
+document.querySelector('.Fashion-cloth-main-next').addEventListener('click', fashionClothingShowNextImage);
+
+function fashionClothingShowPrevImage() {
+  if (fashionClothingCurrentIndex === 0) {
+      fashionClothingCurrentIndex = fashionClothingTotalImages - fashionClothingVisibleImages; 
+  } else {
+      fashionClothingCurrentIndex--;
+  }
+  fashionClothingUpdateCarousel();
+}
+
+function fashionClothingShowNextImage() {
   
+  if (fashionClothingCurrentIndex >= fashionClothingTotalImages - fashionClothingVisibleImages) {
+      fashionClothingCurrentIndex = 0;
+  } else {
+      fashionClothingCurrentIndex++;
+  }
+  fashionClothingUpdateCarousel();
+}
+
+function fashionClothingUpdateCarousel() {
+    const fashionClothingOffset = -fashionClothingCurrentIndex * fashionClothingImageWidth;
+    document.querySelector('.Fashion-cloth-main-images').style.transform = `translateX(${fashionClothingOffset}px)`;
+}
+
+setInterval(fashionClothingShowNextImage, 5000); 
+
+fashionClothingUpdateCarousel(); 
+  /* end js fashion main */
 
   
 
