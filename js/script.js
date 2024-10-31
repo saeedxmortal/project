@@ -149,5 +149,44 @@ setInterval(fashionClothingShowNextImage, 5000);
 fashionClothingUpdateCarousel(); 
   /* end js fashion main */
 
+  /* start js electronic main*/
+
+  let electronicsComputersCurrentIndex = 0;
+const electronicsComputersImages = document.querySelectorAll('.Electronics-computers-main-images img');
+const electronicsComputersTotalImages = electronicsComputersImages.length;
+const electronicsComputersVisibleImages = 4;
+const electronicsComputersImageWidth = 242;
+
+document.querySelector('.Electronics-computers-main-prev').addEventListener('click', electronicsComputersShowPrevImage);
+document.querySelector('.Electronics-computers-main-next').addEventListener('click', electronicsComputersShowNextImage);
+
+function electronicsComputersShowPrevImage() {
+    if (electronicsComputersCurrentIndex === 0) {
+        electronicsComputersCurrentIndex = electronicsComputersTotalImages - electronicsComputersVisibleImages;
+    } else {
+        electronicsComputersCurrentIndex--;
+    }
+    electronicsComputersUpdateCarousel();
+}
+
+function electronicsComputersShowNextImage() {
+    if (electronicsComputersCurrentIndex >= electronicsComputersTotalImages - electronicsComputersVisibleImages) {
+        electronicsComputersCurrentIndex = 0;
+    } else {
+        electronicsComputersCurrentIndex++;
+    }
+    electronicsComputersUpdateCarousel();
+}
+
+function electronicsComputersUpdateCarousel() {
+    const electronicsComputersOffset = -electronicsComputersCurrentIndex * electronicsComputersImageWidth;
+    document.querySelector('.Electronics-computers-main-images').style.transform = `translateX(${electronicsComputersOffset}px)`;
+}
+
+setInterval(electronicsComputersShowNextImage, 5000);
+electronicsComputersUpdateCarousel();
+ /* end js electronic main*/
+
+
   
 

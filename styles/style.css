@@ -434,10 +434,10 @@ img {
 
 .Fashion-cloth-main-sidebar {
   width: 200px;
-  height: 505px;
+  height: 638px;
   overflow-y: auto;
   background-color: white;
- margin-top: 8px;
+  margin-top: 8px;
   border-top: 3px solid red;
 }
 
@@ -446,6 +446,7 @@ img {
   border-bottom: 1px solid gray;
   padding-bottom: 20px;
   padding-left: 10px;
+  font-size: 20px;
 }
 
 .Fashion-cloth-main-sidebar ul {
@@ -516,8 +517,8 @@ img {
   width: 242px;
   height: 346px;
   margin-right: 10px;
-  border: 1px solid #ccc; 
-  border-bottom: none; 
+  border: 1px solid #ccc;
+  border-bottom: none;
 }
 
 .Fashion-cloth-main-bottom {
@@ -532,6 +533,121 @@ img {
 }
 
 /*end css main fashion */
+
+
+/*start css main electronic */
+
+.Electronics-computers-main-container {
+  margin-top: 20px;
+  display: flex;
+  width: 1200px;
+  height: 638px;
+}
+
+.Electronics-computers-main-sidebar {
+  width: 200px;
+  height: 638px;
+  overflow-y: auto;
+  background-color: white;
+  margin-top: 8px;
+  border-top: 3px solid rgba(55, 66, 212, 0.733);
+}
+
+.title-electronics-computers-main {
+  color: rgba(55, 66, 212, 0.733);
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.Electronics-computers-main-sidebar ul {
+  list-style: none;
+  padding: 0;
+  color: gray;
+  font-size: 14px;
+}
+
+.Electronics-computers-main-sidebar li {
+  margin: 25px 0;
+  padding-left: 25px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.Electronics-computers-main-sidebar li:hover {
+  color: red;
+}
+
+.Electronics-computers-main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+
+.Electronics-computers-main-carousel {
+  position: relative;
+  width: 1005px;
+  height: 346px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.Electronics-computers-main-prev,
+.Electronics-computers-main-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.Electronics-computers-main-carousel:hover .Electronics-computers-main-prev,
+.Electronics-computers-main-carousel:hover .Electronics-computers-main-next {
+  opacity: 1;
+}
+
+.Electronics-computers-main-prev {
+  left: 0;
+}
+
+.Electronics-computers-main-next {
+  right: 0;
+}
+
+.Electronics-computers-main-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.Electronics-computers-main-images img {
+  width: 242px;
+  height: 346px;
+  margin-right: 7px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+.Electronics-computers-main-bottom {
+  display: flex;
+  gap: 10px;
+}
+
+.Electronics-computers-main-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*end css main electronic */
+
 
 
 
