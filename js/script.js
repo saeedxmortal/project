@@ -155,7 +155,7 @@ fashionClothingUpdateCarousel();
 const electronicsComputersImages = document.querySelectorAll('.Electronics-computers-main-images img');
 const electronicsComputersTotalImages = electronicsComputersImages.length;
 const electronicsComputersVisibleImages = 4;
-const electronicsComputersImageWidth = 242;
+const electronicsComputersImageWidth = 242+10;
 
 document.querySelector('.Electronics-computers-main-prev').addEventListener('click', electronicsComputersShowPrevImage);
 document.querySelector('.Electronics-computers-main-next').addEventListener('click', electronicsComputersShowNextImage);
@@ -186,6 +186,204 @@ function electronicsComputersUpdateCarousel() {
 setInterval(electronicsComputersShowNextImage, 5000);
 electronicsComputersUpdateCarousel();
  /* end js electronic main*/
+
+ /* start js toy main */
+
+ let toyKidsBabyCurrentIndex = 0;
+ const toyKidsBabyImages = document.querySelectorAll('.Toy-kids-baby-main-images img');
+ const toyKidsBabyTotalImages = toyKidsBabyImages.length;
+ const toyKidsBabyVisibleImages = 4;
+ const toyKidsBabyImageWidth = 242+10; 
+ 
+ document.querySelector('.Toy-kids-baby-main-prev').addEventListener('click', toyKidsBabyShowPrevImage);
+ document.querySelector('.Toy-kids-baby-main-next').addEventListener('click', toyKidsBabyShowNextImage);
+ 
+ function toyKidsBabyShowPrevImage() {
+     if (toyKidsBabyCurrentIndex === 0) {
+         toyKidsBabyCurrentIndex = toyKidsBabyTotalImages - toyKidsBabyVisibleImages;
+     } else {
+         toyKidsBabyCurrentIndex--;
+     }
+     toyKidsBabyUpdateCarousel();
+ }
+ 
+ function toyKidsBabyShowNextImage() {
+     if (toyKidsBabyCurrentIndex >= toyKidsBabyTotalImages - toyKidsBabyVisibleImages) {
+         toyKidsBabyCurrentIndex = 0;
+     } else {
+         toyKidsBabyCurrentIndex++;
+     }
+     toyKidsBabyUpdateCarousel();
+ }
+ 
+ function toyKidsBabyUpdateCarousel() {
+     const toyKidsBabyOffset = -toyKidsBabyCurrentIndex * toyKidsBabyImageWidth;
+     document.querySelector('.Toy-kids-baby-main-images').style.transform = `translateX(${toyKidsBabyOffset}px)`;
+ }
+ 
+ setInterval(toyKidsBabyShowNextImage, 5000); 
+ 
+ toyKidsBabyUpdateCarousel();
+ 
+
+ /* end js toy main */
+
+ /* start js main garden */
+
+ let homeGardenToolsCurrentIndex = 0;
+const homeGardenToolsImages = document.querySelectorAll('.Home-garden-tools-main-images img');
+const homeGardenToolsTotalImages = homeGardenToolsImages.length;
+const homeGardenToolsVisibleImages = 4;
+const homeGardenToolsImageWidth = 242+10;
+
+document.querySelector('.Home-garden-tools-main-prev').addEventListener('click', homeGardenToolsShowPrevImage);
+document.querySelector('.Home-garden-tools-main-next').addEventListener('click', homeGardenToolsShowNextImage);
+
+function homeGardenToolsShowPrevImage() {
+    if (homeGardenToolsCurrentIndex === 0) {
+        homeGardenToolsCurrentIndex = homeGardenToolsTotalImages - homeGardenToolsVisibleImages;
+    } else {
+        homeGardenToolsCurrentIndex--;
+    }
+    homeGardenToolsUpdateCarousel();
+}
+
+function homeGardenToolsShowNextImage() {
+    if (homeGardenToolsCurrentIndex >= homeGardenToolsTotalImages - homeGardenToolsVisibleImages) {
+        homeGardenToolsCurrentIndex = 0;
+    } else {
+        homeGardenToolsCurrentIndex++;
+    }
+    homeGardenToolsUpdateCarousel();
+}
+
+function homeGardenToolsUpdateCarousel() {
+    const homeGardenToolsOffset = -homeGardenToolsCurrentIndex * homeGardenToolsImageWidth;
+    document.querySelector('.Home-garden-tools-main-images').style.transform = `translateX(${homeGardenToolsOffset}px)`;
+}
+
+setInterval(homeGardenToolsShowNextImage, 5000);
+homeGardenToolsUpdateCarousel();
+
+/* end js main garden */
+
+/* start js main decor */
+
+let decorFurnitureCurrentIndex = 0;
+const decorFurnitureImages = document.querySelectorAll('.Decor-furniture-main-images img');
+const decorFurnitureTotalImages = decorFurnitureImages.length;
+const decorFurnitureVisibleImages = 4;
+const decorFurnitureImageWidth = 242 + 10;
+
+document.querySelector('.Decor-furniture-main-prev').addEventListener('click', decorFurnitureShowPrevImage);
+document.querySelector('.Decor-furniture-main-next').addEventListener('click', decorFurnitureShowNextImage);
+
+function decorFurnitureShowPrevImage() {
+    if (decorFurnitureCurrentIndex === 0) {
+        decorFurnitureCurrentIndex = decorFurnitureTotalImages - decorFurnitureVisibleImages;
+    } else {
+        decorFurnitureCurrentIndex--;
+    }
+    decorFurnitureUpdateCarousel();
+}
+
+function decorFurnitureShowNextImage() {
+    if (decorFurnitureCurrentIndex >= decorFurnitureTotalImages - decorFurnitureVisibleImages) {
+        decorFurnitureCurrentIndex = 0;
+    } else {
+        decorFurnitureCurrentIndex++;
+    }
+    decorFurnitureUpdateCarousel();
+}
+
+function decorFurnitureUpdateCarousel() {
+    const decorFurnitureOffset = -decorFurnitureCurrentIndex * decorFurnitureImageWidth;
+    document.querySelector('.Decor-furniture-main-images').style.transform = `translateX(${decorFurnitureOffset}px)`;
+}
+
+setInterval(decorFurnitureShowNextImage, 5000);
+decorFurnitureUpdateCarousel();
+
+/* end js main decor */
+
+/* start js main gifts */
+
+let giftsPartiesHolidayCurrentIndex = 0;
+const giftsPartiesHolidayImages = document.querySelectorAll('.Gifts-parties-holiday-main-images img');
+const giftsPartiesHolidayTotalImages = giftsPartiesHolidayImages.length;
+const giftsPartiesHolidayVisibleImages = 4;
+const giftsPartiesHolidayImageWidth = 242 + 10;
+
+document.querySelector('.Gifts-parties-holiday-main-prev').addEventListener('click', giftsPartiesHolidayShowPrevImage);
+document.querySelector('.Gifts-parties-holiday-main-next').addEventListener('click', giftsPartiesHolidayShowNextImage);
+
+function giftsPartiesHolidayShowPrevImage() {
+    if (giftsPartiesHolidayCurrentIndex === 0) {
+        giftsPartiesHolidayCurrentIndex = giftsPartiesHolidayTotalImages - giftsPartiesHolidayVisibleImages;
+    } else {
+        giftsPartiesHolidayCurrentIndex--;
+    }
+    giftsPartiesHolidayUpdateCarousel();
+}
+
+function giftsPartiesHolidayShowNextImage() {
+    if (giftsPartiesHolidayCurrentIndex >= giftsPartiesHolidayTotalImages - giftsPartiesHolidayVisibleImages) {
+        giftsPartiesHolidayCurrentIndex = 0;
+    } else {
+        giftsPartiesHolidayCurrentIndex++;
+    }
+    giftsPartiesHolidayUpdateCarousel();
+}
+
+function giftsPartiesHolidayUpdateCarousel() {
+    const giftsPartiesHolidayOffset = -giftsPartiesHolidayCurrentIndex * giftsPartiesHolidayImageWidth;
+    document.querySelector('.Gifts-parties-holiday-main-images').style.transform = `translateX(${giftsPartiesHolidayOffset}px)`;
+}
+
+setInterval(giftsPartiesHolidayShowNextImage, 5000);
+giftsPartiesHolidayUpdateCarousel();
+
+/* end js main gifts */
+
+/* start js main health */
+
+let beautyHealthCurrentIndex = 0;
+const beautyHealthImages = document.querySelectorAll('.Beauty-health-main-images img');
+const beautyHealthTotalImages = beautyHealthImages.length;
+const beautyHealthVisibleImages = 4;
+const beautyHealthImageWidth = 242 + 10;
+
+document.querySelector('.Beauty-health-main-prev').addEventListener('click', beautyHealthShowPrevImage);
+document.querySelector('.Beauty-health-main-next').addEventListener('click', beautyHealthShowNextImage);
+
+function beautyHealthShowPrevImage() {
+    if (beautyHealthCurrentIndex === 0) {
+        beautyHealthCurrentIndex = beautyHealthTotalImages - beautyHealthVisibleImages;
+    } else {
+        beautyHealthCurrentIndex--;
+    }
+    beautyHealthUpdateCarousel();
+}
+
+function beautyHealthShowNextImage() {
+    if (beautyHealthCurrentIndex >= beautyHealthTotalImages - beautyHealthVisibleImages) {
+        beautyHealthCurrentIndex = 0;
+    } else {
+        beautyHealthCurrentIndex++;
+    }
+    beautyHealthUpdateCarousel();
+}
+
+function beautyHealthUpdateCarousel() {
+    const beautyHealthOffset = -beautyHealthCurrentIndex * beautyHealthImageWidth;
+    document.querySelector('.Beauty-health-main-images').style.transform = `translateX(${beautyHealthOffset}px)`;
+}
+
+setInterval(beautyHealthShowNextImage, 5000);
+beautyHealthUpdateCarousel();
+/* end js main health */
+
+
 
 
   
