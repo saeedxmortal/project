@@ -408,6 +408,49 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* end js popup */
 
+/* start js menu */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.getElementById("j-floor-fixed-panel");
+    const startSection = document.querySelector(".Fashion-cloth-main-content");
+    const endSection = document.querySelector(".Beauty-health-main-container");
+
+    
+    function toggleMenuVisibility() {
+        const startPosition = startSection.offsetTop;
+        const endPosition = endSection.offsetTop + endSection.offsetHeight;
+        const scrollPosition = window.scrollY + window.innerHeight / 2; 
+
+        if (scrollPosition >= startPosition && scrollPosition <= endPosition) {
+            menu.style.display = "block"; 
+        } else {
+            menu.style.display = "none"; 
+        }
+    }
+
+    window.addEventListener("scroll", toggleMenuVisibility);
+
+    toggleMenuVisibility();
+
+    const links = document.querySelectorAll(".floor-nav-list a");
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); 
+            const targetClass = link.getAttribute("href").substring(1); 
+            const targetSection = document.querySelector(`.${targetClass}`); 
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
+
+/* end js menu */
+
 
 
 
